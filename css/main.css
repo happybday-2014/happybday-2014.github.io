@@ -114,9 +114,14 @@ textarea {
     position: relative;
 }
 
+.comic{
+    padding: 0 20px;
+}
+
 .comic-box {
     position: relative;
-    width: 45%;
+    width: 100%;
+    max-width: 370px;
     margin: auto;
 }
 .comic-box .text{
@@ -152,7 +157,7 @@ textarea {
 }
 
 .comic-3 .character{
-    margin-top: 70px;
+    margin-top: 55px;
 }
 
 .inner{
@@ -162,7 +167,7 @@ textarea {
 }
 
 .explain {
-    margin: 70px 20px 50px;
+    margin: 60px 20px 50px;
 }
 .explain .inner{
     background: white;
