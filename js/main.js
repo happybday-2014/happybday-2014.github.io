@@ -1,14 +1,16 @@
 $.backstretch("img/bg.svg");
 var $happybday = $('.happy-bday'),
-    $page      = $('.page');
+    $page      = $('.page'),
+    $lazyImg   = $("img.lazy"),
     $window    = $(window);
 
 $happybday.css({
   top: $window.height()
 });
 
-$("img.lazy").show().lazyload({
-    // effect : "fadeIn"
+$lazyImg.show().lazyload({
+    'effect': "fadeIn",
+    'event' : "custom"
 });
 
 $window.on('resize', function(){
@@ -16,6 +18,7 @@ $window.on('resize', function(){
 });
 
 $window.on('load', function(){
+  $lazyImg.trigger("custom");
   $page.css({
     visibility: 'visible'
   });
