@@ -2,6 +2,7 @@ $.backstretch("img/bg.svg");
 var $happybday = $('.happy-bday'),
     $page      = $('.page'),
     $lazyImg   = $("img.lazy"),
+    $preloader = $(".preloader"),
     $window    = $(window);
 
 $happybday.css({
@@ -22,6 +23,9 @@ $window.on('load', function(){
   $page.css({
     visibility: 'visible'
   });
+  $preloader.transition({
+    top: -2000
+  }, 2000);
   $happybday.transition({
     top: 0
   }, 2000);
